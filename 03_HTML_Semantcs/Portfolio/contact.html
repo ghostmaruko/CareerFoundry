@@ -11,67 +11,65 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html">About Me</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <div>
-      <h2>Get in Touch</h2>
+      <h1>Get in Touch</h1>
       <p>
         Email:
         <a href="mailto:marcoesu.esu@outlook.it">marcoesu.esu@outlook.it</a>
       </p>
-      <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+      <p>Phone: +123 456 7890</p>
       <p><a href="mailto:marcoesu.esu@outlook.it">Let's work together!</a></p>
     </div>
     <div class="container">
-      <!--  <form id="contact" action="mailto:marcoesu.esu@outlook.it" method="post">
-      
-        <h3>Contact me directly</h3>
-        <fieldset>
-          <input placeholder="Your name" type="text" tabindex="1" required />
-        </fieldset>
-        <fieldset>
-          <input
-            placeholder="Your Email Address"
-            type="email"
-            tabindex="2"
-            method="post"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <input
-            placeholder="Your Phone Number (optional)"
-            type="tel"
-            tabindex="3"
-          />
-        </fieldset>
-        <fieldset>
+      <h2>Contact me directly</h2>
+      <form id="contact-form" class="form-horizontal" role="form">
+        <div class="form-group">
+          <div>
+            <label for="name" class="control-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Your Name"
+              name="name"
+              value=""
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label for="email" class="control-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Your Email"
+              name="email"
+              value=""
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <label for="message" class="control-label">Message</label>
           <textarea
-            placeholder="Type your message here...."
-            tabindex="5"
+            id="message"
+            maxlength="240"
+            placeholder="Your Message"
+            name="message"
             required
           ></textarea>
-        </fieldset>
-        <fieldset>
-          <button name="submit" type="submit" id="contact-submit">
-            Submit
-          </button>
-        </fieldset>
-      </form> -->
-      <form action="" method="post">
-        <label>Email: </label>
-        <input type="email" required />
-
-        <label>Telephone: </label>
-        <input type="tel" />
-
-        <label>Message: </label>
-        <textarea required></textarea>
-
-        <input type="submit" value="Send message" />
+          <div>
+            <button id="submit" type="submit" value="SEND">Send</button>
+          </div>
+        </div>
       </form>
     </div>
     <footer>
@@ -99,5 +97,6 @@
       </ul>
       <a href="/files/cv_nome_cognome.pdf" download>Download CV</a>
     </footer>
+    <script src="js/tota11y.min.js"></script>
   </body>
 </html>
