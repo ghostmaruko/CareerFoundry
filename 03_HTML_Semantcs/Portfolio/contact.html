@@ -7,71 +7,83 @@
     <link rel="stylesheet" href="./style/contact.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div>
-      <h1>Get in Touch</h1>
-      <p>
-        Email:
-        <a href="mailto:marcoesu.esu@outlook.it">marcoesu.esu@outlook.it</a>
-      </p>
-      <p>Phone: +123 456 7890</p>
-      <p><a href="mailto:marcoesu.esu@outlook.it">Let's work together!</a></p>
+    <div class="header-container">
+      <header class="header">
+        <nav role="navigation" aria-label="Main Navigation">
+          <ul role="menubar">
+            <li role="presentation"><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="about.html">About Me</a></li>
+            <li role="presentation">
+              <a href="contact.html" aria-current="page">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
-    <div class="container">
-      <h2>Contact me directly</h2>
-      <form id="contact-form" class="form-horizontal" role="form">
-        <div class="form-group">
+    <main>
+      <div>
+        <h1>Get in Touch</h1>
+        <p>
+          Email:
+          <a href="mailto:marcoesu.esu@outlook.it">marcoesu.esu@outlook.it</a>
+        </p>
+        <p>Phone: +123 456 7890</p>
+        <p><a href="mailto:marcoesu.esu@outlook.it">Let's work together!</a></p>
+      </div>
+      <div class="container">
+        <h2>Contact me directly</h2>
+        <form id="contact-form" class="form-horizontal" role="form">
+          <div class="form-group">
+            <div>
+              <label for="name" class="control-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+                name="name"
+                value=""
+                required
+              />
+            </div>
+          </div>
           <div>
-            <label for="name" class="control-label">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              placeholder="Your Name"
-              name="name"
-              value=""
+            <div>
+              <label for="email" class="control-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Your Email"
+                name="email"
+                value=""
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <label for="message" class="control-label">Message</label>
+            <textarea
+              id="message"
+              maxlength="240"
+              placeholder="Your Message"
+              name="message"
               required
-            />
+            ></textarea>
+            <div>
+              <button
+                id="submit"
+                type="submit"
+                value="SEND"
+                aria-label="Send message"
+              >
+                Send
+              </button>
+            </div>
           </div>
-        </div>
-
-        <div>
-          <div>
-            <label for="email" class="control-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              placeholder="Your Email"
-              name="email"
-              value=""
-              required
-            />
-          </div>
-        </div>
-        <div>
-          <label for="message" class="control-label">Message</label>
-          <textarea
-            id="message"
-            maxlength="240"
-            placeholder="Your Message"
-            name="message"
-            required
-          ></textarea>
-          <div>
-            <button id="submit" type="submit" value="SEND">Send</button>
-          </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+    </main>
     <footer>
       <p>&copy; 2025 My Website</p>
       <h2>Follow me on</h2>
@@ -95,7 +107,12 @@
           /></a>
         </li>
       </ul>
-      <a href="/files/cv_nome_cognome.pdf" download>Download CV</a>
+      <a
+        href="/files/cv_nome_cognome.pdf"
+        download
+        aria-label="Download Marco Esu's CV in PDF format"
+        >Download CV</a
+      >
     </footer>
     <script src="js/tota11y.min.js"></script>
   </body>
