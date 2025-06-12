@@ -24,12 +24,29 @@
     <div class="header-container">
       <header class="header">
         <nav role="navigation" aria-label="Main Navigation">
-          <ul role="menubar">
+          <ul role="menubar" class="=navigation-list">
             <li role="presentation">
-              <a href="index.html" aria-current="page">Home</a>
+              <a
+                href="index.html"
+                role="menuitem"
+                class="navigation-list__item navigation-list__item--active"
+                aria-current="page"
+                >Home</a
+              >
             </li>
-            <li role="presentation"><a href="about.html">About Me</a></li>
-            <li role="presentation"><a href="contact.html">Contact</a></li>
+            <li role="presentation">
+              <a href="about.html" role="menuitem" class="navigation-list__item"
+                >About Me</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="contact.html"
+                role="menuitem"
+                class="navigation-list__item"
+                >Contact</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
@@ -42,7 +59,7 @@
           Hi, I'm Marco Esu — a passionate web developer focused on crafting
           clean, interactive, and user-friendly websites.
         </p>
-        <a href="about.html" class="button">Learn more about me</a>
+        <a href="about.html">Learn more about me</a>
       </div>
     </main>
 
