@@ -1,6 +1,6 @@
 input,
-texture,
 select,
+textarea,
 button {
   font-family: system-ui;
 }
@@ -30,4 +30,3 @@ a:active {
   /* selected link */
   color: #489c79;
 }
-
