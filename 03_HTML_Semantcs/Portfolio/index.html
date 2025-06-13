@@ -9,8 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Normalize CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -19,10 +17,17 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="stylesheet" type="text/css" href="style/navbar.css" />
   </head>
+
   <body>
     <div class="header-container">
-      <header class="header">
+      <header class="header fixed-header">
+        <img
+          src="https://placehold.co/100x100"
+          alt="Logo Marco Esu"
+          class="logo"
+        />
         <nav role="navigation" aria-label="Main Navigation">
           <ul role="menubar" class="navigation-list">
             <li role="presentation">
@@ -56,20 +61,26 @@
         </nav>
       </header>
     </div>
-    <main>
-      <div class="about-container">
-        <h1>About Me</h1>
+
+    <main style="padding-top: 100px">
+      <section class="about-container">
         <img
           src="img/profile_picture.jpg"
           class="profile_picture"
-          alt="Profile Picture"
+          alt="Marco Esu"
         />
-        <p>
-          Hi, I'm Marco Esu — a passionate web developer focused on crafting
-          clean, interactive, and user-friendly websites.
-        </p>
-        <a href="about.html">Learn more about me</a>
-      </div>
+        <div>
+          <h1>Hello World</h1>
+          <p class="about-text">
+            I’m Marco Esu — a curious mind who loves to build clean,
+            interactive, and user-friendly websites. When I’m not coding, you’ll
+            probably find me playing Nintendo, building LEGO sets, reading
+            manga, exploring new places, or diving into a new passion — from
+            sports to Pokémon. I believe great digital experiences are like good
+            games: engaging, intuitive, and a little bit fun.
+          </p>
+        </div>
+      </section>
     </main>
 
     <div class="footer-container">
@@ -97,10 +108,11 @@
           </li>
         </ul>
         <a
-          href="/files/cv_nome_cognome.pdf"
+          href="/03_HTML_Semantcs/Portfolio/2_CV_MarcoEsu_2025.pdf"
           download
           aria-label="Download Marco Esu's CV in PDF format"
-          >Download CV</a
+          class="cv-link"
+          >Take a look at my CV</a
         >
       </footer>
     </div>

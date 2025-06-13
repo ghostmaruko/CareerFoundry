@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -12,38 +11,29 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" type="text/css" href="style/buttons.css" />
-    <link rel="stylesheet" type="text/css" href="style/form.css" />
-    <link rel="stylesheet" type="text/css" href="style/style.css" />
-    <link rel="stylesheet" type="text/css" href="style/contact.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/form.css" />
+    <link rel="stylesheet" href="style/contact.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
   </head>
   <body>
     <div class="header-container">
-      <header class="header">
-        <nav role="navigation" aria-label="Main Navigation">
-          <ul role="menubar">
-            <li role="presentation">
-              <a href="index.html" role="menuitem" class="navigation-list__item"
-                >Home</a
-              >
+      <header class="header fixed-header">
+        <img
+          src="https://placehold.co/100x100"
+          alt="Logo Marco Esu"
+          class="logo"
+        />
+        <nav aria-label="Main Navigation">
+          <ul role="menubar" class="navigation-list">
+            <li><a href="index.html" class="navigation-list__item">Home</a></li>
+            <li>
+              <a href="about.html" class="navigation-list__item">About Me</a>
             </li>
-            <li role="presentation">
-              <a href="about.html" role="menuitem" class="navigation-list__item"
-                >About Me</a
-              >
-            </li>
-            <li role="presentation">
-              <a href="work.html" role="menuitem" class="navigation-list__item"
-                >Work</a
-              >
-            </li>
-            <li role="presentation">
+            <li><a href="work.html" class="navigation-list__item">Work</a></li>
+            <li>
               <a
-                role="menuitem"
                 href="contact.html"
                 class="navigation-list__item navigation-list__item--active"
                 aria-current="page"
@@ -54,8 +44,9 @@
         </nav>
       </header>
     </div>
-    <main>
-      <div>
+
+    <main style="padding-top: 100px">
+      <section class="contact-info">
         <h1>Get in Touch</h1>
         <p>
           Email:
@@ -67,15 +58,11 @@
             ><button>Let's work together!</button></a
           >
         </p>
-      </div>
-      <div class="container">
+      </section>
+
+      <section class="contact-form-container">
         <h2>Contact me directly</h2>
-        <form
-          id="contact-form"
-          class="form-horizontal"
-          novalidate
-          aria-labelledby="form-title"
-        >
+        <form id="contact-form" class="form-horizontal" novalidate>
           <div class="form-group">
             <label for="name">Name <span aria-hidden="true">*</span></label>
             <input
@@ -84,8 +71,6 @@
               name="name"
               placeholder="Your Full Name"
               required
-              aria-required="true"
-              aria-describedby="name-help"
             />
           </div>
 
@@ -97,12 +82,8 @@
               name="email"
               placeholder="your@email.com"
               required
-              aria-required="true"
-              aria-describedby="email-help"
             />
-            <small id="email-help"
-              >We’ll never share your email with anyone else.</small
-            >
+            <small>We’ll never share your email with anyone else.</small>
           </div>
 
           <div class="form-group">
@@ -115,52 +96,51 @@
               placeholder="Write your message here"
               maxlength="240"
               required
-              aria-required="true"
-              aria-describedby="message-help"
             ></textarea>
-            <small id="message-help">Max 240 characters.</small>
+            <small>Max 240 characters.</small>
           </div>
+
           <div aria-live="polite" id="form-feedback" class="sr-only"></div>
-          <button
-            type="submit"
-            class="secondary_button"
-            aria-label="Send message"
-          >
-            Send
-          </button>
+
+          <button type="submit" class="secondary_button">Send</button>
         </form>
-      </div>
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2025 My Website</p>
-      <h2>Follow me on</h2>
-      <ul class="social-icons">
-        <li>
-          <a href="https://github.com/"
-            ><img
-              width="30"
-              height="30"
-              src="https://img.icons8.com/ios-glyphs/30/github.png"
-              alt="github"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/marco-esu-502b89136/"
-            ><img
-              width="30"
-              height="30"
-              src="https://img.icons8.com/ios-filled/50/linkedin.png"
-              alt="LinkedIn"
-          /></a>
-        </li>
-      </ul>
-      <a
-        href="/files/cv_nome_cognome.pdf"
-        download
-        aria-label="Download Marco Esu's CV in PDF format"
-        >Download CV</a
-      >
-    </footer>
+
+    <div class="footer-container">
+      <footer>
+        <p>&copy; 2025 My Website</p>
+        <h2>Follow me on</h2>
+        <ul class="social-icons">
+          <li>
+            <a href="https://github.com/"
+              ><img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ios-glyphs/30/github.png"
+                alt="github"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/marco-esu-502b89136/"
+              ><img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ios-filled/50/linkedin.png"
+                alt="LinkedIn"
+            /></a>
+          </li>
+        </ul>
+        <a
+          href="/03_HTML_Semantcs/Portfolio/2_CV_MarcoEsu_2025.pdf"
+          download
+          aria-label="Download Marco Esu's CV in PDF format"
+          class="cv-link"
+          >Take a look at my CV</a
+        >
+      </footer>
+    </div>
+
     <script src="js/tota11y.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,45 @@
+.work-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.work-section h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.grid__item {
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid__item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.grid__item p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.grid__item a {
+  font-weight: bold;
+  color: #357b70;
+  text-decoration: none;
+}
+
+.grid__item a:hover {
+  text-decoration: underline;
+}

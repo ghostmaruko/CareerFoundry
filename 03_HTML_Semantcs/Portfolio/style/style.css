@@ -1,49 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
 input,
 select,
 textarea,
 button {
   font-family: system-ui;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
+  margin: 0;
+  padding: 0;
 }
+
+/* 2. HEADER FLEX LAYOUT */
 .header-container {
-  box-sizing: border-box;
   background-color: #f0f0f0;
   padding: 20px;
-  text-align: center;
 }
-h1 {
-  font-size: 40px;
-  font-weight: 700;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.navigation-list__item--active {
+
+.logo {
+  width: 100px;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-list__item {
+  color: #ffffff;
   text-decoration: none;
 }
+
+.navigation-list__item--active {
+  font-weight: bold;
+  border-bottom: 2px solid #d400ff;
+}
+
+/* 3. ABOUT SECTION */
+.about-container {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .profile_picture {
-  float: left;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 20px;
+  margin-right: 20px;
 }
+
+.about-text {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* 4. LINKS */
 a {
-  color: #357b70;
+  color: #ffffff;
   text-decoration: none;
 }
 a:visited {
-  /* visited link */
-  color: #05676e;
+  color: #ffffff;
 }
 a:hover,
 a:focus {
-  /* No underlining when hovering over a link */
   text-decoration: none;
 }
 a:active {
-  /* selected link */
-  color: #489c79;
+  color: #ffffff;
+}
+
+/* 5. FOOTER */
+.footer-container {
+  background-color: #725bda;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+.cv-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3700ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cv-link:hover {
+  background-color: #d400ff;
 }

@@ -1,32 +1,55 @@
-input,
-select,
-textarea,
-button {
-  font-family: system-ui;
+.contact-info {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
 }
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
-h1 {
-  font-size: 40px;
-  font-weight: 700;
+
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
-a {
-  color: #357b70;
-  text-decoration: none;
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
-a:visited {
-  /* visited link */
-  color: #05676e;
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-a:hover,
-a:focus {
-  /* No underlining when hovering over a link */
-  text-decoration: none;
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-a:active {
-  /* selected link */
-  color: #489c79;
+
+.form-group small {
+  margin-top: 5px;
+  color: #666;
+}
+
+.secondary_button {
+  background-color: #357b70;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.secondary_button:hover {
+  background-color: #285c54;
 }

@@ -1,32 +1,52 @@
-input,
-select,
-textarea,
-button {
-  font-family: system-ui;
+.skills-chart {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+
+.skills-chart h2 {
+  text-align: center;
+  margin-bottom: 30px;
 }
-h1 {
-  font-size: 40px;
-  font-weight: 700;
+
+.skill {
+  margin-bottom: 20px;
 }
-a {
-  color: #357b70;
-  text-decoration: none;
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
-a:visited {
-  /* visited link */
-  color: #05676e;
+
+.bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
 }
-a:hover,
-a:focus {
-  /* No underlining when hovering over a link */
-  text-decoration: none;
+
+.level {
+  height: 100%;
+  background-color: #357b70;
 }
-a:active {
-  /* selected link */
-  color: #489c79;
+
+.level.html {
+  width: 100%;
+}
+
+.level.css {
+  width: 65%;
+}
+
+.level.js {
+  width: 50%;
+}
+
+.level.react {
+  width: 25%;
+}
+
+.level.C {
+  width: 50%;
 }

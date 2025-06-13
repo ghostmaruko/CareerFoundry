@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marco Esu Portfolio</title>
-    <!-- Google Fonts -->
+    <title>Marco Esu Portfolio – Work</title>
+
+    <!-- Fonts & CSS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -16,11 +17,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/work.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
   </head>
+
   <body>
     <div class="header-container">
-      <header class="header">
+      <header class="header fixed-header">
+        <img src="https://placehold.co/100x100" alt="Logo" class="logo" />
         <nav role="navigation" aria-label="Main Navigation">
           <ul role="menubar" class="navigation-list">
             <li role="presentation">
@@ -54,10 +59,50 @@
         </nav>
       </header>
     </div>
-    <main>
-      <div>
-        <h1>Works</h1>
-      </div>
+
+    <main style="padding-top: 100px">
+      <section class="work-section">
+        <h1>My Work</h1>
+        <div class="grid">
+          <div class="grid__item">
+            <h2>Rock-Paper-Scissor</h2>
+            <p>A simple Rock-Paper-Scissor game built with JS.</p>
+            <a
+              href="https://github.com/ghostmaruko/Rock-Paper-Scissor"
+              target="_blank"
+              >View on GitHub</a
+            >
+          </div>
+          <div class="grid__item">
+            <h2>Movie Database</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+              architecto, ipsam in, tenetur nulla deserunt consequuntur placeat
+              labore, ullam exercitationem porro necessitatibus omnis aperiam
+              eius nisi voluptatibus illo eveniet quod?
+            </p>
+            <a href="#" target="_blank">View on GitHub</a>
+          </div>
+          <div class="grid__item">
+            <h2>Portfolio Website</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+              quidem.
+            </p>
+            <a href="#" target="_blank">View on GitHub</a>
+          </div>
+          <div class="grid__item">
+            <h2>To-Do App</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
+              dignissimos harum, quas accusamus laudantium voluptatum excepturi
+              eligendi quasi voluptas natus, eos officia autem, tempore
+              nesciunt.
+            </p>
+            <a href="#" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div class="footer-container">
@@ -85,13 +130,15 @@
           </li>
         </ul>
         <a
-          href="/files/cv_nome_cognome.pdf"
+          href="/03_HTML_Semantcs/Portfolio/2_CV_MarcoEsu_2025.pdf"
           download
           aria-label="Download Marco Esu's CV in PDF format"
-          >Download CV</a
+          class="cv-link"
+          >Take a look at my CV</a
         >
       </footer>
     </div>
+
     <script src="js/tota11y.min.js"></script>
   </body>
 </html>
