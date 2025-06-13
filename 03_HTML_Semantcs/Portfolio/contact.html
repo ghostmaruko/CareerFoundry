@@ -9,8 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Normalize CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -20,6 +18,7 @@
     />
     <link rel="stylesheet" type="text/css" href="style/buttons.css" />
     <link rel="stylesheet" type="text/css" href="style/form.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
     <link rel="stylesheet" type="text/css" href="style/contact.css" />
   </head>
   <body>
@@ -27,10 +26,29 @@
       <header class="header">
         <nav role="navigation" aria-label="Main Navigation">
           <ul role="menubar">
-            <li role="presentation"><a href="index.html">Home</a></li>
-            <li role="presentation"><a href="about.html">About Me</a></li>
             <li role="presentation">
-              <a href="contact.html" aria-current="page">Contact</a>
+              <a href="index.html" role="menuitem" class="navigation-list__item"
+                >Home</a
+              >
+            </li>
+            <li role="presentation">
+              <a href="about.html" role="menuitem" class="navigation-list__item"
+                >About Me</a
+              >
+            </li>
+            <li role="presentation">
+              <a href="work.html" role="menuitem" class="navigation-list__item"
+                >Work</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                role="menuitem"
+                href="contact.html"
+                class="navigation-list__item navigation-list__item--active"
+                aria-current="page"
+                >Contact</a
+              >
             </li>
           </ul>
         </nav>
