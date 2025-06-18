@@ -43,3 +43,19 @@
 .grid__item a:hover {
   text-decoration: underline;
 }
+
+/* Responsive styles */
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .work-section h1 {
+    font-size: 24px;
+  }
+
+  .grid__item {
+    padding: 15px;
+  }
+}

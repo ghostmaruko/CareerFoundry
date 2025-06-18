@@ -9,18 +9,18 @@ a {
   text-decoration: none;
 }
 a:visited {
-  /* visited link */
-  color: #05676e;
+  color: #ffffff;
 }
 a:hover,
 a:focus {
-  /* No underlining when hovering over a link */
   text-decoration: none;
 }
-a:active {
-  /* selected link */
-  color: #489c79;
-}
+/* a:active {
+  color: #d900ff;
+} */
+
+/* Button styles */
+.button-cv-link,
 button {
   border: none;
   font-family: inherit;
@@ -30,6 +30,8 @@ button {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.9s;
+  transition-property: opacity;
 }
 .secondary_button {
   background-color: #e0b354;
