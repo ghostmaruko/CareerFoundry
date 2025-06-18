@@ -51,7 +51,7 @@
   width: 50%;
 }
 
-.button-cv-link {
+/* .button-cv-link {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
@@ -59,7 +59,7 @@
   color: white;
   text-decoration: none;
   border-radius: 5px;
-}
+} */
 
 .button-cv-link:hover {
   background-color: #d400ff;

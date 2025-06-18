@@ -20,8 +20,8 @@ a:focus {
 } */
 
 /* Button styles */
-.button-cv-link,
-button {
+/* .button-cv-link,
+.button {
   border: none;
   font-family: inherit;
   background-color: #3700ff;
@@ -32,7 +32,7 @@ button {
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition-duration: 0.9s;
   transition-property: opacity;
-}
+} */
 .secondary_button {
   background-color: #e0b354;
   color: #2b2b2b;
