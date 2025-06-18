@@ -23,10 +23,10 @@
   transition: all 0.3s ease;
 }
 
-/* On hover, fill the whole link area from top */
 .navigation-list__item:hover::before {
   height: 100%;
 }
+
 /* media queries */
 @media all and (max-width: 500px) {
   .header {

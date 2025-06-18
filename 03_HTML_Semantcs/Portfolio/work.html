@@ -17,10 +17,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/work.css" />
     <link rel="stylesheet" href="style/navbar.css" />
     <link rel="stylesheet" href="style/buttons.css" />
+    <link rel="stylesheet" href="style/animation.css" />
   </head>
 
   <body>
@@ -68,7 +75,7 @@
           <div class="grid__item">
             <h2>Rock-Paper-Scissor</h2>
             <p>A simple Rock-Paper-Scissor game built with JS.</p>
-            <a
+            <a class="work-link"
               href="https://github.com/ghostmaruko/Rock-Paper-Scissor"
               target="_blank"
               >View on GitHub</a
@@ -82,7 +89,7 @@
               labore, ullam exercitationem porro necessitatibus omnis aperiam
               eius nisi voluptatibus illo eveniet quod?
             </p>
-            <a href="#" target="_blank">View on GitHub</a>
+            <a class="work-link" href="#" target="_blank">View on GitHub</a>
           </div>
           <div class="grid__item">
             <h2>Portfolio Website</h2>
@@ -90,7 +97,7 @@
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
               quidem.
             </p>
-            <a href="#" target="_blank">View on GitHub</a>
+            <a class="work-link" href="#" target="_blank">View on GitHub</a>
           </div>
           <div class="grid__item">
             <h2>To-Do App</h2>
@@ -100,11 +107,23 @@
               eligendi quasi voluptas natus, eos officia autem, tempore
               nesciunt.
             </p>
-            <a href="#" target="_blank">View on GitHub</a>
+            <a class="work-link" href="#" target="_blank">View on GitHub</a>
           </div>
         </div>
       </section>
     </main>
+
+    <div class="pokeball-wrapper">
+      <!-- <div class="pokeball"></div> -->
+      <img
+        src="img/Poké_Ball_icon.svg"
+        alt="Pokéball"
+        class="pokeball"
+        width="96"
+        height="96"
+      />
+      <div class="gotcha-text pixelify-sans">Gotcha!</div>
+    </div>
 
     <div class="footer-container">
       <footer>

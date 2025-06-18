@@ -1,3 +1,17 @@
+.contact-info a {
+  text-decoration: none;
+  color: #725bda;
+}
+.contact-info a:hover {
+  color: #d400ff;
+}
+
+.contact-info h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
 .contact-info {
   text-align: center;
   padding: 40px 20px;
