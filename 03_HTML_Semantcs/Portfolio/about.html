@@ -19,40 +19,50 @@
       href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
-    <!--    <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="style/about.css" />
-    <link rel="stylesheet" href="style/navbar.css" />
-    <link rel="stylesheet" href="style/buttons.css" />
-    <link rel="stylesheet" href="style/animation.css" /> -->
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="style/style.production.css" />
   </head>
   <body>
     <div class="header-container">
-      <header class="header fixed-header">
-        <img
-          src="https://placehold.co/100x100"
-          alt="Logo Marco Esu"
-          class="logo"
-        />
-        <nav aria-label="Main Navigation">
-          <ul role="menubar" class="navigation-list">
-            <li><a href="index.html" class="navigation-list__item">Home</a></li>
-            <li>
-              <a
-                href="about.html"
-                class="navigation-list__item navigation-list__item--active"
-                aria-current="page"
-                >About Me</a
-              >
-            </li>
-            <li><a href="work.html" class="navigation-list__item">Work</a></li>
-            <li>
-              <a href="contact.html" class="navigation-list__item">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+    <header class="header fixed-header">
+      <img
+        src="https://placehold.co/100x100"
+        alt="Logo Marco Esu"
+        class="logo"
+      />
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a
+              href="index.html"
+              role="menuitem"
+              class="navigation-list__item navigation-list__item--active"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item"
+              >About Me</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="work.html" role="menuitem" class="navigation-list__item"
+              >Work</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="contact.html"
+              role="menuitem"
+              class="navigation-list__item"
+              >Let's Talk</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
     <main style="padding-top: 100px">
       <section class="about-container">
         <img
@@ -134,13 +144,13 @@
             /></a>
           </li>
         </ul>
-        <a
+   <!--      <a
           href="/03_HTML_Semantcs/Portfolio/2_CV_MarcoEsu_2025.pdf"
           download
           aria-label="Download Marco Esu's CV in PDF format"
           class="cv-link"
           >Take a look at my CV</a
-        >
+        > -->
       </footer>
     </div>
 

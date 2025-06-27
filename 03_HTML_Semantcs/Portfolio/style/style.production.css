@@ -20,7 +20,6 @@
   /* === Transitions === */
 }
 
-
 /* ============================================================
    RESET & GLOBAL STYLES
 ============================================================ */
@@ -82,29 +81,52 @@ a:active {
   color: #489c79;
 }
 
-
 /* ============================================================
-   HEADER
+   HEADER NAVBAR ADATTATA
 ============================================================ */
 .header-container {
-  background-color: #725bda;
+  background-color: #725bda; /* viola Growza */
   padding: 20px;
+  -webkit-box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+          box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* un po’ di padding orizzontale */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* da space-between a center */
+  gap: 40px; /* spazio tra logo e navbar */
 }
 
 .logo {
-  width: 100px;
+  width: 60px; /* più piccolo, puoi regolare */
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+nav[role="navigation"] {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin-left: 0;
 }
 
 .navigation-list {
@@ -112,9 +134,15 @@ a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 15px;
+  gap: 32px;
   margin: 0;
   padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navigation-list__item {
@@ -122,15 +150,20 @@ a:active {
   display: inline-block;
   color: #ffffff;
   font-weight: 500;
+  font-size: 18px;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 6px;
   overflow: hidden;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-/* PullDown effect (line animata) */
+/* PullDown effect (linea animata sopra) */
 .navigation-list__item::before {
   content: "";
   position: absolute;
@@ -140,20 +173,61 @@ a:active {
   top: 0;
   background: #ffffff;
   opacity: 0.3;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  transition: height 0.3s ease;
 }
 
-.navigation-list__item:hover::before {
+.navigation-list__item:hover::before,
+.navigation-list__item:focus::before {
   height: 100%;
 }
 
-.navigation-list__item--active {
-  font-weight: bold;
-  /* border-bottom: 2px solid var(--color-accent); */
+.navigation-list__item:hover {
+  color: #ffffff;
+  outline: none;
 }
 
+.navigation-list__item:focus {
+  color: #ffffff;
+  outline: none;
+}
+
+/* Evidenzia link attivo */
+.navigation-list__item--active {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Bottone Contact - stile speciale */
+.navigation-list li:last-child .navigation-list__item {
+  background-color: #ffffff;
+  color: #725bda;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-box-shadow: 0 4px 8px rgb(114 91 218 / 0.4);
+          box-shadow: 0 4px 8px rgb(114 91 218 / 0.4);
+}
+
+.navigation-list li:last-child .navigation-list__item:hover {
+  background-color: #5a45b8; /* variante scura di viola */
+  color: #ffffff;
+  outline: none;
+  -webkit-box-shadow: 0 6px 12px rgb(90 69 184 / 0.7);
+          box-shadow: 0 6px 12px rgb(90 69 184 / 0.7);
+}
+
+.navigation-list li:last-child .navigation-list__item:focus {
+  background-color: #5a45b8; /* variante scura di viola */
+  color: #ffffff;
+  outline: none;
+  -webkit-box-shadow: 0 6px 12px rgb(90 69 184 / 0.7);
+          box-shadow: 0 6px 12px rgb(90 69 184 / 0.7);
+}
 
 /* ============================================================
    ABOUT SECTION
@@ -183,7 +257,6 @@ a:active {
   font-size: 20px;
   line-height: 1.5;
 }
-
 
 /* ============================================================
    SKILLS CHART
@@ -236,7 +309,6 @@ a:active {
 .level.C {
   width: 50%;
 }
-
 
 /* ============================================================
    POKEBALL SECTION & ANIMATIONS
@@ -417,7 +489,6 @@ a:active {
   }
 }
 
-
 /* ============================================================
    FOOTER
 ============================================================ */
@@ -467,7 +538,6 @@ h2 {
 .cv-link:hover {
   background-color: #d400ff;
 }
-
 
 /* ============================================================
    BUTTONS
@@ -529,7 +599,6 @@ button:focus {
 .secondary_button:hover {
   background-color: #285c54;
 }
-
 
 /* ============================================================
    CONTACT SECTION
@@ -638,25 +707,17 @@ button:focus {
   margin-top: 5px;
 }
 
-button.secondary_button {
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #3700ff;
-  color: #ffffff;
-  border-radius: 6px;
-  cursor: pointer;
-  -webkit-transition: background-color 0.2s ease;
-  -o-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
-
-button.secondary_button:hover,
-button.secondary_button:focus {
-  background-color: #c300ff;
-}
-
 
 /* ============================================================
    EASTER EGG SECTION
@@ -702,7 +763,6 @@ button.secondary_button:focus {
 }
 
 /* Reuse fade-in animation from above */
-
 
 /* ============================================================
    WORK SECTION
@@ -764,7 +824,6 @@ button.secondary_button:focus {
   color: #ff00bb;
   text-decoration: none;
 }
-
 
 /* ============================================================
    FORM GENERAL
@@ -856,7 +915,6 @@ small {
   border: 0;
 }
 
-
 /* ============================================================
    MEDIA QUERIES
 ============================================================ */
@@ -872,6 +930,11 @@ small {
         -ms-flex-align: start;
             align-items: flex-start;
     padding: 10px;
+  }
+
+  nav[role="navigation"] {
+    margin-left: 0;
+    width: 100%;
   }
 
   .navigation-list {
@@ -921,6 +984,11 @@ small {
     padding: 15px;
   }
 
+  nav[role="navigation"] {
+    margin-left: 0;
+    width: 100%;
+  }
+
   .navigation-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -933,7 +1001,6 @@ small {
   .navigation-list__item {
     padding: 8px;
     font-size: 16px;
-    color: #ffffff;
   }
 
   .logo {
