@@ -28,7 +28,7 @@
   --color-grey: #e0e0e0;
   --color-bg-light: #f9f9f9;
   --color-bg-white: #ffffff;
-  --color-bg-surface: #f3f3f3;
+  --color-bg-surface: #141414;
   --color-footer: #000000;
   --color-error: #e63946;
   --color-error-focus: #d90429;
@@ -630,7 +630,7 @@ button:focus,
 }
 
 .work-link:visited {
-  color: var(--color-footer);
+  color: var(--color-secondary);
 }
 
 .grid {
@@ -643,12 +643,14 @@ button:focus,
   background-color: var(--color-bg-surface);
   padding: 20px;
   border-radius: var(--radius-lg);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: var(--color-secondary) solid 1px;
+  box-shadow: 0 2px 5px rgba(46, 46, 46, 0.1);
 }
 
 .grid__item h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: var(--color-secondary);
 }
 
 .grid__item p {
