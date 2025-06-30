@@ -15,13 +15,13 @@
 
   /* === Colors === */
   --color-primary: #357b70;
-  --color-secondary: #3700ff;
+  --color-secondary: #6d1cc9;
   --color-accent: #d400ff;
   --color-dark-accent: #1e00c7;
   --color-link-visited: #ffffff;
   --color-link-active: #489c79;
-  --color-button-hover: #285c54;
-  --color-button-alt: #e0b354;
+  --color-button-hover: #5e0e6e;
+  --color-button-alt: #d400ff;
   --color-text-dark: #2b2b2b;
   --color-text-light: #666666;
   --color-light-grey: #f0f0f0;
@@ -29,10 +29,11 @@
   --color-bg-light: #f9f9f9;
   --color-bg-white: #ffffff;
   --color-bg-surface: #f3f3f3;
-  --color-footer: #725bda;
+  --color-footer: #000000;
   --color-error: #e63946;
   --color-error-focus: #d90429;
-  --color-gotcha: red;
+  --color-gotcha: #ffffff;
+  --color-background: #000000;
 
   /* === Spacing === */
   --spacing-xs: 5px;
@@ -66,6 +67,10 @@ body {
   padding: 0;
   background-color: #f8f9fa; /* da Easter Egg section */
   text-align: center; /* da Easter Egg section */
+  color: var(--color-bg-white); /* testo bianco */
+  background-color: var(
+    --color-background
+  ); /* sfondo scuro se vuoi più contrasto */
 }
 
 input,
@@ -97,23 +102,36 @@ a:active {
 /* ============================================================
    HEADER NAVBAR ADATTATA
 ============================================================ */
-.header-container {
-  background-color: var(--color-footer); /* viola Growza */
+/* .header-container {
+  background-color: var(--color-footer); 
   padding: var(--spacing-md);
   box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
-}
+} */
 
 .header {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md); /* un po’ di padding orizzontale */
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px); /* effetto vetro */
+  -webkit-backdrop-filter: blur(10px); /* supporto Safari */
+  padding: 16px 32px;
+  border-radius: var(--radius-xl);
+  border-style: solid;
+  border-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
-  justify-content: center; /* da space-between a center */
-  gap: 40px; /* spazio tra logo e navbar */
+  justify-content: center;
+  gap: 40px;
+  z-index: 999;
+  max-width: 960px;
+  width: 90%;
 }
 
 .logo {
@@ -189,7 +207,8 @@ nav[role="navigation"] {
   font-weight: 600;
   padding: 10px 24px;
   border-radius: var(--radius-lg);
-  transition: background-color var(--transition-normal), color var(--transition-normal);
+  transition: background-color var(--transition-normal),
+    color var(--transition-normal);
   box-shadow: 0 4px 8px rgb(114 91 218 / 0.4);
 }
 
@@ -372,6 +391,7 @@ nav[role="navigation"] {
 ============================================================ */
 .footer-container {
   background-color: var(--color-footer);
+  border-top: var(--color-secondary) solid 1px;
   padding: var(--spacing-md);
   color: var(--color-bg-white);
   text-align: center;
@@ -384,6 +404,18 @@ nav[role="navigation"] {
   list-style: none;
   padding: 0;
   margin: var(--spacing-md) 0;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease, filter 0.3s ease;
+  filter: brightness(100%);
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  filter: brightness(150%);
 }
 
 h1 {
@@ -450,16 +482,20 @@ button:focus,
 /* ============================================================
    CONTACT SECTION
 ============================================================ */
+.form-horizontal {
+  background-color: var(--color-background);
+  border: var(--color-secondary) solid 1px;
+}
 .contact-info {
   text-align: center;
   padding: var(--spacing-lg) var(--spacing-md);
-  background-color: var(--color-bg-light);
+  background-color: var(--color-background);
 }
 
 .contact-info h1 {
   font-size: 36px;
   margin-bottom: var(--spacing-md);
-  color: var(--color-text-dark);
+  color: var(--color-secondary);
 }
 
 .contact-info a {
@@ -491,34 +527,34 @@ button:focus,
 .form-group label {
   font-weight: bold;
   margin-bottom: 5px;
-  color: var(--color-text-dark);
+  color: var(--color-secondary);
 }
 
 .form-group input,
 .form-group textarea {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-secondary);
   border-radius: var(--radius-md);
   transition: border-color 0.2s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #4a90e2;
+  border-color: var(--color-secondary);
   outline: none;
 }
 
 .form-group input:invalid,
 .form-group textarea:invalid {
-  border-color: var(--color-error);
-  background-color: #fff5f5;
+  /* border-color: var(--color-error); */
+  background-color: #2b2b2b;
 }
 
 .form-group input:invalid:focus,
 .form-group textarea:invalid:focus {
-  border-color: var(--color-error-focus);
-  background-color: #ffeaea;
+  /* border-color: var(--color-error-focus); */
+  background-color: #2b2b2b;
 }
 
 /* help message */
@@ -637,52 +673,63 @@ button:focus,
    FORM GENERAL
 ============================================================ */
 form {
-  max-width: 500px;
+  max-width: 600px;
   margin: 2rem auto;
-  padding: 1.5rem;
-  background: var(--color-bg-white);
-  border: 1px solid var(--color-grey);
+  padding: var(--spacing-lg) var(--spacing-md);
+  background-color: var(--color-footer);
+  color: var(--color-bg-white);
+  border: 1px solid var(--color-secondary);
   border-radius: var(--radius-lg);
-  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(114, 91, 218, 0.15);
+  font-family: var(--font-family-base);
 }
 
 form h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.25rem;
+  font-size: var(--font-size-subheading);
+  margin-bottom: var(--spacing-md);
   text-align: center;
+  color: var(--color-bg-white);
 }
 
 label {
   margin-bottom: 0.5rem;
   font-size: var(--font-size-small);
-  color: #333;
+  color: var(--color-secondary);
+  text-align: left;
 }
 
 input,
 textarea {
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: var(--radius-sm);
-  font-size: 1rem;
-  transition: border-color 0.2s ease;
+  width: 100%;
+  padding: 12px;
+  background-color: #111;
+  color: var(--color-bg-white);
+  border: 1px solid #333;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
 }
 
 input:focus,
 textarea:focus {
-  border-color: #4a90e2;
+  border-color: var(--color-secondary);
   outline: none;
+  box-shadow: 0 0 0 2px rgba(114, 91, 218, 0.4);
 }
 
 input:invalid,
 textarea:invalid {
-  border-color: var(--color-error);
-  background-color: #fff5f5;
+  background-color: #2b2b2b;
 }
 
 input:invalid:focus,
 textarea:invalid:focus {
-  border-color: var(--color-error-focus);
-  background-color: #ffeaea;
+  background-color: #2b2b2b;
 }
 
 /* Help message */
@@ -690,6 +737,27 @@ small {
   font-size: var(--font-size-small);
   color: var(--color-text-light);
   margin-top: 0.25rem;
+  display: block;
+}
+
+/* Submit Button */
+form button {
+  background: var(--color-secondary);
+  color: var(--color-bg-white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-top: var(--spacing-md);
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background: #8d74ff;
+  transform: scale(1.03);
 }
 
 /* Screen reader only */
@@ -702,6 +770,15 @@ small {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.form-row.two-columns {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.form-row.two-columns .form-group {
+  flex: 1;
 }
 
 /* ============================================================
@@ -789,5 +866,11 @@ small {
 
   .work-section h1 {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row.two-columns {
+    flex-direction: column;
   }
 }
