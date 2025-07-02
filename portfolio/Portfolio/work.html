@@ -24,20 +24,37 @@
       rel="stylesheet"
     />
     <!-- Custom Styles -->
-    <!--   <link rel="stylesheet" href="style/style.production.css" /> -->
-    <link rel="stylesheet" href="style/style.css" />
+      <link rel="stylesheet" href="style/style.production.css" />
+    <!-- <link rel="stylesheet" href="style/style.css" /> -->
   </head>
 
   <body>
-    <div class="header-container">
-      <header class="header fixed-header">
+        <div class="header-container">
+      <header class="header">
+        <!-- LOGO -->
         <img
           src="https://placehold.co/100x100"
           alt="Logo Marco Esu"
           class="logo"
         />
+
+        <!-- MENU HAMBURGER -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label
+          for="menu-toggle"
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-controls="main-menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- NAVIGATION - deve venire dopo l’input per funzionare con ~ nel CSS -->
         <nav role="navigation" aria-label="Main Navigation">
-          <ul role="menubar" class="navigation-list">
+          <ul id="main-menu" role="menubar" class="navigation-list">
             <li role="presentation">
               <a
                 href="index.html"
