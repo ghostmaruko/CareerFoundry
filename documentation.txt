@@ -1,0 +1,35 @@
+Linters Used:
+
+1. HTML:
+   - Name: HTMLHint
+   - Type: VSCode Extension
+   - Settings: Default
+
+2. CSS:
+   - Name: Stylelint
+   - Type: VSCode Extension
+   - Config file: stylelint.config.js
+   - Settings: Default ruleset (no custom changes applied)
+
+
+Cross-Browser Testing Results:
+
+Tools Used:
+- BrowserStack (Free trial)
+- Chrome DevTools - Device Simulation
+
+Browsers tested:
+✔ Chrome (Windows)
+✔ Firefox (Windows)
+✔ Microsoft Edge (Windows)
+✔ Safari (macOS, simulato via BrowserStack)
+
+Mobile:
+✔ Chrome su Android (simulato)
+✔ Safari su iOS (simulato)
+
+Results:
+✅ No layout, styling, or functionality bugs were found across tested browsers and devices.
+
+Issues Found:
+- None
